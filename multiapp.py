@@ -23,6 +23,7 @@ class MultiApp:
 
     # This method starts the web-app
     def run(self):
+        st.set_page_config(page_title='PyClim', layout = 'wide', initial_sidebar_state = 'auto')
         st.sidebar.write('# PyClim')
 
         epw = EPWHelper() 
