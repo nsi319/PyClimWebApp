@@ -976,7 +976,7 @@ class EPWHelper():
     # are used for connecting to EnergyPlus
     #
 
-    @st.cache
+    @st.cache(suppress_st_warning=True)
     def _get_db(self):
         # Connect to EnergyPlus
         response = urlopen('https://github.com/NREL/EnergyPlus/raw/develop/weather/master.geojson')
@@ -986,7 +986,6 @@ class EPWHelper():
         # abs_file_path = os.path.join(script_dir, rel_path)
         # with open(abs_file_path) as fp:
         #     data = json.loads(fp)
-
         return data
     
     # These methods (_calculate_d, _sort_list_by_distance) sort locations by euclidean distance
@@ -1382,7 +1381,7 @@ class EPWHelper():
             get_line_color=[0, 0, 0],
         )
 
-        view_state = pdk.ViewState(latitude=selected['lat'].iloc[0], longitude=selected['lon'].iloc[0], zoom=4, min_zoom= 1, max_zoom=30, height=170)
+        view_state = pdk.ViewState(latitude=selected['lat'].iloc[0], longitude=selected['lon'].iloc[0], zoom=3, min_zoom= 1, max_zoom=30, height=400)
         
         r = pdk.Deck(
             layers=[layer, layer2],
@@ -1391,4 +1390,4 @@ class EPWHelper():
             tooltip={"html": "<b>Title: </b> {title} <br />" "<b>Latitude: </b> {lat} <br /> " "<b>Longitude: </b> {lon} <br /> " }
         )
                             
-        st.sidebar.pydeck_chart(r)
+        st.pydeck_chart(r)
