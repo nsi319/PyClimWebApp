@@ -110,4 +110,5 @@ def app(app, epw, ui):
     fig_title = 'Wind Rose'
 
     graph, href = ui.base64_to_link_and_graph(fig, fig_title, 'jpg', 700, 520)
+    # st.plotly_chart(fig, use_container_width=True)
     st.write(graph, href, unsafe_allow_html=True)

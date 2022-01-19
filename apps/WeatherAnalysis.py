@@ -180,6 +180,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_ground, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_ground, use_container_width=True)
 
 
 
@@ -203,6 +204,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_temp_hist, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_temp_hist, use_container_width=True)
 
 
     fig_wind_hist, ax_wind_hist = plt.subplots(1,1, figsize = (12,6), tight_layout=True)
@@ -222,6 +224,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_wind_hist, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_wind_hist, use_container_width=True)
 
 
 
@@ -238,6 +241,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_illuminance, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_illuminance, use_container_width=True)
     #plots a degree-day histograms
 
     fig_monthly_degree, ax_monthly_degree = plt.subplots(1, 1, figsize = (12,6), tight_layout=True)
@@ -253,6 +257,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_monthly_degree, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_monthly_degree, use_container_width=True)
 
     #this plots violin plots:
     fig_violin, axes = plt.subplots(2,2, figsize = (12,6), tight_layout=True)
@@ -285,6 +290,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_violin, fig_title, 'jpg', 700, 350)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_violin, use_container_width=True)
 
 
     #This creates a 2D solar availability surface plot
@@ -309,6 +315,7 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_solar, fig_title, 'jpg', 800, 400)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_solar, use_container_width=True)
 
 
     #This creates a 2D daylight availability surface plot
@@ -335,3 +342,4 @@ def app(app, epw, ui, timeshift=timeshift):
 
     graph, href = ui.base64_to_link_and_graph(fig_daylight, fig_title, 'jpg', 800, 400)
     st.write(graph, href, unsafe_allow_html=True)
+    # st.plotly_chart(fig_daylight, use_container_width=True)

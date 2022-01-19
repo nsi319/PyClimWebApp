@@ -153,4 +153,5 @@ def app(app, epw, ui):
     ax_sun.axis('off')
 
     graph, href = ui.base64_to_link_and_graph(fig_sun, fig_title, 'jpg', 700, 700)
-    st.write(graph, href, unsafe_allow_html=True)
+    st.plotly_chart(fig_sun, use_container_width=True)
+    # st.write(graph, href, unsafe_allow_html=True)

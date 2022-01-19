@@ -135,4 +135,5 @@ def app(app, epw, ui, timeshift=timeshift, groundref=groundref):
         ax.set_ylabel('Collector tilt, deg')
 
     graph, href = ui.base64_to_link_and_graph(fig, fig_title, 'jpg', 800, 400)
+    # st.plotly_chart(fig, use_container_width=True)
     st.write(graph, href, unsafe_allow_html=True)

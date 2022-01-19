@@ -132,4 +132,5 @@ def app(app, epw, ui, timeshift=timeshift):
 
     fig_title = 'Solar Geometry Subplots'
     graph, href = ui.base64_to_link_and_graph(fig, fig_title, 'jpg', 700, 700/15*10)
-    st.write(graph, href, unsafe_allow_html=True)
+    st.plotly_chart(fig, use_container_width=True)
+    # st.write(graph, href, unsafe_allow_html=True)

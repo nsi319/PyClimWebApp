@@ -153,7 +153,8 @@ def app(app, epw, ui):
         ax.legend(loc = 'upper left', frameon=False)
 
     graph, href = ui.base64_to_link_and_graph(fig, fig_title, 'jpg', 700, 700/3*2)
-    st.write(graph, href, unsafe_allow_html=True)
+    st.plotly_chart(fig, use_container_width=True)
+    # st.write(graph, href, unsafe_allow_html=True)
 
     if PlotEvapCool:
         
@@ -238,6 +239,7 @@ def app(app, epw, ui):
         ax.set_title(fig_title, loc='center')
 
         graph, href = ui.base64_to_link_and_graph(fig, fig_title, 'jpg', 700, 700/3*2)
-        st.write(graph, href, unsafe_allow_html=True)
+        st.plotly_chart(fig, use_container_width=True)
+        # st.write(graph, href, unsafe_allow_html=True)
 
 
