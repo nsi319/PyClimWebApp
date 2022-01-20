@@ -98,4 +98,8 @@ class MultiApp:
                     src="https://c.statcounter.com/12570505/0/a197d8ba/0/"
                     alt="free web stats"></a></div></noscript>
                     <!-- End of Statcounter Code -->
+                    <script type=”text/javascript” 
+                    src=”https://js-cdn.dynatrace.com/jstag/?_complete.js" 
+                    crossorigin=”anonymous”>
+                    </script>
                 """)
